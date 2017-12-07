@@ -65,7 +65,7 @@ Please follow the links to reproduce the clustering results of TCGA data sets
 
 ## Example data sets
 
-The 22 TCGA cancer data sets are saved in the matlab file in the dropbox directory [*all_data.mat*](https://www.dropbox.com/s/v22fx0j2gnpeta6/all_data.mat?dl=0). 
+The 22 TCGA cancer data sets saved in the matlab file can be obtained from the dropbox directory [**all_data.mat**](https://www.dropbox.com/s/v22fx0j2gnpeta6/all_data.mat?dl=0). 
 
 Specifically, *all_clin* includes clinical information of the patients from the 22 cancer types.
 
@@ -82,7 +82,8 @@ Specifically, *all_clin* includes clinical information of the patients from the 
 
 ## DOWNLOAD
 
-We provide MATLAB implementations of *MKerW-A* in the MKerW-A branch.
+We provide MATLAB implementations of *MKerW-A* in the MKerW-A branch. The 22 TCGA cancer data sets saved in the matlab file can be downloaded from the dropbox directory [**all_data.mat**](https://www.dropbox.com/s/v22fx0j2gnpeta6/all_data.mat?dl=0). 
+
 
 
 ## Authors
