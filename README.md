@@ -65,7 +65,7 @@ Please follow the links to reproduce the clustering results of TCGA data sets
 
 ## Example data sets
 
-The 22 TCGA cancer data sets are provided in the matlab file [*all_data.mat*](https://github.com/ishspsy/project/tree/master/MPSSC/Data). 
+The 22 TCGA cancer data sets are saved in the matlab file in the dropbox directory [*all_data.mat*](https://www.dropbox.com/s/v22fx0j2gnpeta6/all_data.mat?dl=0). 
 
 Specifically, *all_clin* includes clinical information of the patients from the 22 cancer types.
 
