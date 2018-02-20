@@ -69,7 +69,7 @@ fc2<-function(clin,cluster){
     clinccc
 }
 
-###plot for Fig3
+###plot for Fig6
 clin<-dat[which(dat$disease_code=="BRCA"),]
 cluster<-read.table("~/your/file/path/cancer1.csv",sep = ",",header = F,stringsAsFactors = F)
 clin$time<-ifelse(clin$time<="0","0.001",clin$time)
@@ -107,7 +107,7 @@ mtext("A",adj = 0,cex=1.8)
 
 
 
-###plot for Fig4
+###plot for Fig7
 
 clin<-dat[which(dat$disease_code=="LGG"),]
 cluster<-read.table("~/your/file/path/cancer16.csv",sep = ",",header = F,stringsAsFactors = F)
@@ -144,7 +144,7 @@ bty = "n",cex=1.3))
 mtext("A",adj = 0,cex=1.8)
 
 
-###plot for Fig5
+###plot for Fig8
 clin<-dat[which(dat$disease_code=="PAAD"),]
 cluster<-read.table("~/Documents/MATLAB/cancer15.csv",sep = ",",header = F,stringsAsFactors = F)
 clin$time<-ifelse(clin$time<="0","0.001",clin$time)
