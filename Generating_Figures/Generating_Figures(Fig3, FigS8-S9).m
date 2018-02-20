@@ -1,4 +1,4 @@
-%% This file geneartes Fig 1(C), Fig S8, and Fig S9.
+%% This file geneartes Fig 3, Fig S8, and Fig S9.
 
 addpath(genpath(pwd))
 
