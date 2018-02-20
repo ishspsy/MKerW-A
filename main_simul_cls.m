@@ -98,7 +98,7 @@ end
 [mean(nnmi_wd123);mean(ppmi_wd123);mean(rrmi_wd123)]
 [std(nnmi_wd123);std(ppmi_wd123);std(rrmi_wd123)]
 
-%save('sim_22cancers_cls2_number.mat', 'nnmi_wd123','ppmi_wd123','rrmi_wd123')
+%save('sim_22cancers_cls2_number1.mat', 'nnmi_wd123','ppmi_wd123','rrmi_wd123')
 
 
 
