@@ -1,4 +1,4 @@
-%%% This file generates Figure 1(B), Figure S1, and Figures S5-S6.
+%%% This file generates Figure 2, Figure S1, and Figures S5-S6.
 
 addpath(genpath(pwd))
 
@@ -32,7 +32,7 @@ print -depsc multi_cancer_pn_gph_1118
 
 
 
-%% Genearing Figure 1(B)
+%% Genearing Figure 2
 load('simul_threedata_22.mat')
 aaa=importdata('simiclu.mat');
 
@@ -78,6 +78,7 @@ htext=text(-0.03,1.03,'B','Units','normalized')
 htext.FontSize=20;
 set(gca,'FontSize', 14);
 print -depsc multi_cancer_nmi_bar 
+
 
 %% Genearing Figure S5
 %purity
