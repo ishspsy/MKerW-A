@@ -1,4 +1,4 @@
-# MKerW-A: Integrating multidimensional data for clustering analysis
+# MKerW-A: Integrating multidimensional data for clustering analysis with applications to cancer patient data
 
 
 
