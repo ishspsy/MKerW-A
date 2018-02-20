@@ -102,38 +102,3 @@ end
 
 
 
-%% generating stability graph (target cluster number) 
-aaa=importdata('sim_22cancers_cls2_number.mat')
-load('norm_cls_number_const.mat')
-
-normalized_stab=mean(aaa.ppmi_wd123)./norm_cls_purity_const(1,:);
-standard_stab=std(aaa.ppmi_wd123)./norm_cls_purity_const(1,:);
-
-normalized_nmi=[mean(aaa.nnmi_wd123)];   
-standard_nmi=[std(aaa.nnmi_wd123)];     
-
-normalized_ari=[mean(aaa.rrmi_wd123)];  
-standard_ari=[std(aaa.rrmi_wd123)];     
-
-mean_velocity = normalized_stab;   
-std_velocity =standard_stab;    
-
-mean_velocity2=normalized_nmi;    
-std_velocity2=standard_nmi;
-
-mean_velocity3=normalized_ari;    
-std_velocity3=standard_ari;
-
-
-clf
-figure
-hold on
-ttt1=bar(2:30,mean_velocity2);  
-ttt2=errorbar(2:30,mean_velocity2,std_velocity2,'.'); ttt2.Color='b'
-ttt=xlabel('Target cluster number'); ttt.FontSize=15;
-xlim([1 31]); ylim([0 1])
-ylabel('NMI', 'FontSize', 15)
-alpha 0.5
-set(gca,'FontSize', 14);
-
-print -depsc normalized_simul_22cancer_nmi
