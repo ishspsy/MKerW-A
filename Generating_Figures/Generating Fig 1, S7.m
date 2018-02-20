@@ -1,4 +1,6 @@
 %% generating Fig 1 and S7
+addpath(genpath(pwd))
+
 aaa=importdata('sim_22cancers_cls2_number1.mat')
 load('norm_cls_number_const.mat')
 
