@@ -88,7 +88,7 @@ We provide MATLAB implementations of *MKerW-A* in the MKerW-A branch. The 22 TCG
 
 ## Authors
 
-* [**Seyoung Park**](http://people.yale.edu/search/seyoung_park.profile), Hao Xu, and   [**Hongyu Zhao**](https://publichealth.yale.edu/biostat/people/hongyu_zhao.profile)
+* [**Seyoung Park**](http://people.yale.edu/search/seyoung_park.profile) and   [**Hongyu Zhao**](https://publichealth.yale.edu/biostat/people/hongyu_zhao.profile)
 
   Department of Biostatistics, School of Public Health, Yale University
 
