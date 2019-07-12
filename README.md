@@ -10,7 +10,7 @@
 ### Main functions
 
 - [generate_sim_matrices2.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/generate_sim_matrices2.m)
-: Contruct multiple similarity matrices using Gaussian kernels (Step 1).
+: Construct multiple similarity matrices using Gaussian kernels (Step 1).
 
 - [clus_sim_update2_2HW.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update2_2HW.m)
 : Main *MKerW-A* algorithm solving optimization problem (Step 2).
@@ -22,23 +22,23 @@
 : Simple example file of *MKerW-A* using BRCA cancer.
 
 
-### Example files
+### Main analysis
 
 Please follow the links to reproduce the clustering results of TCGA data sets
 
--  [Clustering analysis for each cancer type](https://github.com/ishspsy/MKerW-A/blob/master/main_real.m)
+-  [Clustering analysis for each cancer type ("main_real.m")](https://github.com/ishspsy/MKerW-A/blob/master/main_real.m)
 : Generate clustering results for each of the 22 cancer types.
 
--  [Clustering analysis for identifying 22 cancer types](https://github.com/ishspsy/MKerW-A/blob/master/main_simul.m)
+-  [Clustering analysis for identifying 22 cancer types ("main_simul.m")](https://github.com/ishspsy/MKerW-A/blob/master/main_simul.m)
 : Generate clustering results related to identifying 22 cancer types.
 
--  [Analysis on target cluster number](https://github.com/ishspsy/MKerW-A/blob/master/main_simul_cls.m)
+-  [Analysis on target cluster number ("main_simul_cls.m")](https://github.com/ishspsy/MKerW-A/blob/master/main_simul_cls.m)
 : Choose target cluster number.
 
--  [Sensitivity analysis](https://github.com/ishspsy/MKerW-A/blob/master/main_simul_robust.m)
-: Sensitivity analysis with respect to changes of reglarization parameters.
+-  [Sensitivity analysis ("main_simul_robust.m")](https://github.com/ishspsy/MKerW-A/blob/master/main_simul_robust.m)
+: Sensitivity analysis with respect to changes of regularization parameters.
 
--  [Sensitivity test w.r.t. additive noise](https://github.com/ishspsy/MKerW-A/blob/master/main_simul_pert.m)
+-  [Sensitivity test w.r.t. additive noise ("main_simul_pert.m")](https://github.com/ishspsy/MKerW-A/blob/master/main_simul_pert.m)
 : Sensitivity analysis with respect to additive noise.
 
 
@@ -69,11 +69,11 @@ The 22 TCGA cancer data sets saved in the matlab file can be obtained from the d
 
 Specifically, *all_clin* includes clinical information of the patients from the 22 cancer types.
 
-- *all_exp* is the RNA data for all the patinets.
+- *all_exp* is the RNA data for all the patients.
 
-- *all_mirna* is the MicroRNA data for all the patinets.
+- *all_mirna* is the MicroRNA data for all the patients.
 
-- *all_cna* is the CNA data for all the patinets.
+- *all_cna* is the CNA data for all the patients.
 
 - *all_pat* is the index vector of patients indicating corresponding cancer types (See the first column of *all_clin* for the original cancer name).
 
@@ -90,13 +90,13 @@ We provide MATLAB implementations of *MKerW-A* in the MKerW-A branch. The 22 TCG
 
 * [**Seyoung Park**](http://people.yale.edu/search/seyoung_park.profile) and   [**Hongyu Zhao**](https://publichealth.yale.edu/biostat/people/hongyu_zhao.profile)
 
- Department of Statistics, Sungkyunkwan University 
+ Department of Statistics, Sungkyunkwan University and
  Department of Biostatistics, School of Public Health, Yale University
 
 
 ## Contact
 
-* seyoung.park@yale.edu
+* ishspsy@skku.edu
 
 ## License
 
