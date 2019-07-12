@@ -9,13 +9,13 @@
 
 ### Main functions
 
-- [generate_sim_matrices2.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_code/generate_sim_matrices2.m)
+- [generate_sim_matrices2.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/generate_sim_matrices2.m)
 : Contruct multiple similarity matrices using Gaussian kernels (Step 1).
 
-- [clus_sim_update2_2HW.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_code/clus_sim_update2_2HW.m)
+- [clus_sim_update2_2HW.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update2_2HW.m)
 : Main *MKerW-A* algorithm solving optimization problem (Step 2).
 
-- [clus_sim_update0_2HW.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_code/clus_sim_update0_2HW.m)
+- [clus_sim_update0_2HW.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update0_2HW.m)
 : Algorithm solving embedded ADMM algorithm in Step 2.
 
 - [Example (BRCA)](https://github.com/ishspsy/MKerW-A/blob/master/example_BRCA.m)
@@ -52,9 +52,9 @@ Please follow the links to reproduce the clustering results of TCGA data sets
 
 ### Directory
 
-- All the functions used in the proposed algorithm *MKerW-A* are located in the directory ["**Main_Code**"](https://github.com/ishspsy/MKerW-A/tree/master/Main_code).
+- All the functions used in the proposed algorithm *MKerW-A* are located in the directory ["**Main_functions**"](https://github.com/ishspsy/MKerW-A/tree/master/Main_functions).
 
-- All the other supplementary files are located in the directory ["**Other_codes**"](https://github.com/ishspsy/MKerW-A/tree/master/Other_codes).
+- All the other supplementary files are located in the directory ["**Other_functions**"](https://github.com/ishspsy/MKerW-A/tree/master/Other_functions).
 
 - All the codes generating figures presented in the manuscript are located in the directory ["**Generating_Figures**"](https://github.com/ishspsy/MKerW-A/tree/master/Generating_Figures).
 
