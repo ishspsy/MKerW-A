@@ -299,6 +299,7 @@ rmi_ssc123=[rmi_ssc123,RandIndex(true_labs, Clus_ind_sparsc123)];
 
 end
 
+save('similar_color_map.mat',   'Wfc0s_euc_near_n')
 
 
 nmi_set{1}=nmi_cen1;nmi_set{2}=nmi_cen2;nmi_set{3}=nmi_cen3;nmi_set{4}=nmi_cen123; nmi_set{5}=nmi_cm123;

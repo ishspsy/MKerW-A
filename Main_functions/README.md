@@ -41,6 +41,10 @@ This directory includes main functions used in main clustering analysis
 - [reg_pca.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/reg_pca.m)
 : Algorithm 
 
+- [cal_normalized_purtiy.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/cal_normalized_purtiy.m)
+: Algorithm computing average value and standard deviation of the cluster performances (e.g. NMI, purity, ARI)
+for the randomly assigned clusters given each target cluster numbers from 2 to 30.
+
 
 
 
