@@ -13,7 +13,7 @@ this directory contains clustering results for the 22 cancer types.
     * [clsnumber_set.mat](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Clusters_index/clsnumber_set.mat): 
 this file includes target clustering numbers for each of the 22 cancer types.
 
-    * [surv_analysis_mu1_lam0001_i_norandom.mat](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Clusters_index/surv_analysis_mu1_lam0001_1_norandom.mat): this file contains clustering results for various clustering methods for the i-th cancer type. This file is generated from
+    * [surv_analysis_mu1_lam0001_i_norandom.mat](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Clusters_index/surv_analysis_mu1_lam0001_1_norandom.mat): this file contains clustering results for various clustering methods for the i-th cancer type, where i is in $\{1,\cdots, 22\}$. This file is generated from
 [main_real.m](https://github.com/ishspsy/MKerW-A/main_real.m).
 
     * [Index_csv](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Clusters_index/Index_csv) : 
