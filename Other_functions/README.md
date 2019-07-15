@@ -3,42 +3,58 @@
 
 This directory includes supplementary functions related to other benchmark clustering methods used in analysis
 
-## Codes
+## Subdirectory
 
-- [aft_models](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/aft_models)
+- [**aft_models**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/aft_models)
 : Construct multiple similarity matrices using Gaussian kernels (Step 1).
 
-- [code_coregspectral](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/code_coregspectral)
+- [**code_coregspectral**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/code_coregspectral)
 : Main *MKerW-A* algorithm solving optimization problem (Step 2).
 
-- [drtoolbox](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/drtoolbox)
-: Algorithm solving embedded ADMM algorithm in Step 2.
+- [**drtoolbox**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/drtoolbox)
+: this subdirectory/package includes all the codes related to the "Matlab Toolbox for Dimensionality Reduction". This was developed by Laurens van der Maaten (lvdmaaten@gmail.com) and 
+the related paper is "Visualizing High-Dimensional Data Using t-SNE".
 
-- [ECC](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/ECC)
+
+
+
+- [**ECC**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/ECC)
+: this subdirectory/package includes all the codes related to the "consensus clustering". This was developed by Hongfu Liu (liu.hongf@husky.neu.edu).
+
+
+- [**FMINSEARCHBND**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/FMINSEARCHBND)
 : Algorithm 
 
-- [FMINSEARCHBND](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/FMINSEARCHBND)
+- [**gui**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/gui)
 : Algorithm 
 
-- [gui](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/gui)
+- [**J_cluster_bp**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/J_cluster_bp)
 : Algorithm 
 
-- [J_cluster_bp](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/J_cluster_bp)
+- [**LibADMM-master**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/LibADMM-master)
+:  this subdirectory/package includes all the codes related to the "Sparse Spectral Clustering". This was developed by Canyi Lu (canyilu@gmail.com) and 
+the related paper is "A Unified Alternating Direction Method of Multipliers by Majorization Minimization".
+
+
+
+ 
+
+- [**mcorran1**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/mcorran1)
 : Algorithm 
 
-- [LibADMM-master](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/LibADMM-master)
-: Algorithm 
+- [**projcapped**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/projcapped)
+:  this subdirectory includes "projection.m" function that is used in "clus_sim_update0_2.m". 
+This was developed by Weiran Wang and the related paper is "Projection onto the capped simplex".
 
-- [mcorran1](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/mcorran1)
-: Algorithm 
+ 
 
-- [projcapped](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/projcapped)
-: Algorithm 
+- [**SIMLR**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/SIMLR)
+: this subdirectory/package includes all the codes related to the "SIMLR". This was developed by bowang87@stanford.edu and 
+the related paper was published in Nature Methods titled as "Visualization and analysis of single-cell RNA-seq data by kernel-based similarity learning".
 
-- [SIMLR](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/SIMLR)
-: Algorithm 
 
-- [techniques](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/techniques)
+
+- [**techniques**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/techniques)
 : Algorithm 
 
 
