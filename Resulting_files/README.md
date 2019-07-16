@@ -41,7 +41,7 @@ This resulting file is generated from [cal_normalized_purtiy.m](https://github.c
     - [sim_22cancers_cls2_number1.mat](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Simulation_results/sim_22cancers_cls2_number1.mat):
 This mat file includes the clustering performances for the proposed clustering method using the simulation data.
 This resulting file is generated from [main_simul_cls.m](https://github.com/ishspsy/MKerW-A/blob/master/main_simul_cls.m).
-This file is used in [Generating Fig 1, S7.m](https://github.com/ishspsy/MKerW-A/blob/master/Generating_Figures/Generating Fig 1, S7.m).
+This file is used in [Generating_Fig1_S7.m](https://github.com/ishspsy/MKerW-A/blob/master/Generating_Figures/Generating_Fig1_S7.m).
 
 
     - [simiclu.mat](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Simulation_results/simiclu.mat):
@@ -60,17 +60,17 @@ This mat file includes the icluster results with noise level 2 in the simulation
     - [similar_color_map.mat](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Simulation_results/similar_color_map.mat):
 This mat file includes similarity matrices of the cancer data used in clustering analysis.
 This resulting file is generated from [main_simul.m](https://github.com/ishspsy/MKerW-A/blob/master/main_simul.m).
-This file is used in [Generating Fig 2, S1, S5-S6.m](https://github.com/ishspsy/MKerW-A/blob/master/Generating_Figures/Generating Fig 2, S1, S5-S6.m).
+This file is used in [Generating_Fig 2_S1_S5-S6.m](https://github.com/ishspsy/MKerW-A/blob/master/Generating_Figures/Generating Fig2_S1_S5-S6.m).
 
     - [simul_robust.mat](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Simulation_results/simul_robust.mat):
 This mat file includes robustness test results of MKerW-A with respect to changes of regularization parameters.
 This resulting file is generated from [main_simul_robust.m](https://github.com/ishspsy/MKerW-A/blob/master/main_simul_robust.m).
-This file is used in [Generating Fig S4.m](https://github.com/ishspsy/MKerW-A/blob/master/Generating_Figures/Generating Fig S4.m).
+This file is used in [Generating_Fig_S4.m](https://github.com/ishspsy/MKerW-A/blob/master/Generating_Figures/Generating_Fig_S4.m).
 
     - [simul_threedata_22_stability_mean.mat](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Simulation_results/simul_threedata_22_stability_mean.mat):
 This mat file includes the results of the different clustering methods over the 22 different cancer types.
 This resulting file is generated from [main_simul.m](https://github.com/ishspsy/MKerW-A/blob/master/main_simul.m).
-This file is used in [Generating Fig 2, S1, S5-S6.m](https://github.com/ishspsy/MKerW-A/blob/master/Generating_Figures/Generating Fig 2, S1, S5-S6.m).
+This file is used in [Generating_Fig2_S1_S5-S6.m](https://github.com/ishspsy/MKerW-A/blob/master/Generating_Figures/Generating Fig2_S1_S5-S6.m).
 
 
 
@@ -90,13 +90,13 @@ This file is used in [Generating Fig 2, S1, S5-S6.m](https://github.com/ishspsy/
     - [pheat.csv](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Survival_results/pheat.csv):
 This csv file includes the p-value of the log rank test for the various clustering methods.
 This resulting file is generated from [codeforMKerWA.R](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Survival_results/codeforMKerWA.R)
-This file is used in [Generating Fig 4-5.m](https://github.com/ishspsy/MKerW-A/blob/master/Generating_Figures/Generating Fig 4-5.m).
+This file is used in [Generating_Fig4-5.m](https://github.com/ishspsy/MKerW-A/blob/master/Generating_Figures/Generating Fig 4-5.m).
 
 
     - [minheat.csv](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Survival_results/minheat.csv):
 This csv file includes the area_min values for the various clustering methods.
 This resulting file is generated from [codeforMKerWA.R](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Survival_results/codeforMKerWA.R)
-This file is used in [Generating Fig 4-5.m](https://github.com/ishspsy/MKerW-A/blob/master/Generating_Figures/Generating Fig 4-5.m).
+This file is used in [Generating_Fig4-5.m](https://github.com/ishspsy/MKerW-A/blob/master/Generating_Figures/Generating Fig 4-5.m).
 
 
 
