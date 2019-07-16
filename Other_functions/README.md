@@ -5,8 +5,6 @@ This directory includes supplementary functions related to other benchmark clust
 
 ## Subdirectory
 
-- [**aft_models**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/aft_models)
-: Construct multiple similarity matrices using Gaussian kernels (Step 1).
 
 - [**code_coregspectral**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/code_coregspectral)
 : Main *MKerW-A* algorithm solving optimization problem (Step 2).
@@ -16,46 +14,24 @@ This directory includes supplementary functions related to other benchmark clust
 the related paper is "Visualizing High-Dimensional Data Using t-SNE".
 
 
-
-
 - [**ECC**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/ECC)
 : this subdirectory/package includes all the codes related to the "consensus clustering". This was developed by Hongfu Liu (liu.hongf@husky.neu.edu).
 
-
-- [**FMINSEARCHBND**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/FMINSEARCHBND)
-: Algorithm 
-
-- [**gui**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/gui)
-: Algorithm 
-
-- [**J_cluster_bp**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/J_cluster_bp)
-: Algorithm 
 
 - [**LibADMM-master**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/LibADMM-master)
 :  this subdirectory/package includes all the codes related to the "Sparse Spectral Clustering". This was developed by Canyi Lu (canyilu@gmail.com) and 
 the related paper is "A Unified Alternating Direction Method of Multipliers by Majorization Minimization".
 
 
-
- 
-
-- [**mcorran1**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/mcorran1)
-: Algorithm 
-
 - [**projcapped**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/projcapped)
 :  this subdirectory includes "projection.m" function that is used in "clus_sim_update0_2.m". 
 This was developed by Weiran Wang and the related paper is "Projection onto the capped simplex".
 
- 
 
 - [**SIMLR**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/SIMLR)
 : this subdirectory/package includes all the codes related to the "SIMLR". This was developed by bowang87@stanford.edu and 
 the related paper was published in Nature Methods titled as "Visualization and analysis of single-cell RNA-seq data by kernel-based similarity learning".
 
-
-
-- [**techniques**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/techniques)
-: Algorithm 
 
 
 
