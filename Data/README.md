@@ -10,7 +10,8 @@ This directory includes clinical data files used in main clustering analysis
 
 - [clinical2.txt](https://github.com/ishspsy/MKerW-A/blob/master/Data/clinical2.txt)
 : this file contains clinical information of all the patients across 22 cancer types considered in the paper as well as including 
-the following additional three columns: "radiation_therapy", "target_therapy", and  "age stage"
+the following additional three columns: "radiation_therapy", "target_therapy", and  "age stage".
+The analyses in the paper are based on this data.
 
 
 

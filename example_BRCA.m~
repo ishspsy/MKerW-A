@@ -79,24 +79,23 @@ sel_cna2 = reg_pca(sel_cna',min(n,100));
 K=3;  
 gg=ones(1,K); 
 sigma_set=1:0.25:2;  
-g_set=10:2:30;
+k_set=10:2:30;
 data_set3={sel_exp2,sel_mirna2,sel_cna2};  
-[Wfc0s_euc_near_n]=generate_sim_matrices2(K,data_set3, gg, 0,sigma_set,g_set);
+[Wfc0s_euc_near_n]=generate_sim_matrices2(K,data_set3, gg, 0,sigma_set,k_set);
 
 
 %% Target clustering number 
 CCC=4;
 
 %% this is our clustering algorithm 
-% regularization parameters are specified:
+% regularization parameters are specified as suggested in the manuscript:
 c=0.1; rho=2; lam=0.001; mu=1; eta=1;   
 
 % Solve the optimization problem
 [P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, ...
 Wfc0s_euc_near_n);  
 
-% learned weight for each omic data  
-% ck123 records the weight of each data
+% learned weight for each omic data  % ck123 records the weight of each data
 ck123=ck;
 tresult=[P_set,V_set,V_tot,ck,W_set,Wg_set];  tresult_final=tresult;
 
