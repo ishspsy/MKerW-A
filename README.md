@@ -19,7 +19,7 @@
 : Algorithm solving embedded ADMM algorithm in Step 2.
 
 - [Example (BRCA)](https://github.com/ishspsy/MKerW-A/blob/master/example_BRCA.m)
-: This file includes a brief analysis step used in the paper when patients of Breast Invasive Carcinoma (BRCA) cancer are used in analysis.  
+: This file includes a brief analysis step used in the paper when patients of Breast Invasive Carcinoma (BRCA) cancer are used in our analysis.  
 User may follow the similar analysis step for the other cancer types.
 
 
