@@ -9,7 +9,6 @@ load('all_data')
 % all_mirna is the mirna data for all the patinets
 % all_cna is the cna data for all the patinets
 % all_pat is the index vector of patients indicating corresponding cancer types (See the first column of all_clin for the original cancer name)
-load('clsnumber_set.mat')
 % CCC_set is the target cluster number for 22 cancer types
 
 % The followings are indices of each of the 22 cancer types:

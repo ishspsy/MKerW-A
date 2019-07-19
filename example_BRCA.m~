@@ -2,8 +2,7 @@
 
 addpath(genpath(pwd))
 
-%% Step 1 : Data loading and processing 
-% This step is also a part of "main_real.m" file
+%% Step 1 : Data loading and processing
 
 % The following matlab file can be downloaded from 
 % https://www.dropbox.com/s/v22fx0j2gnpeta6/all_data.mat?dl=0
@@ -84,10 +83,6 @@ sel_mirna2 = reg_pca(sel_mirna',min(n,100));
 sel_cna2 = reg_pca(sel_cna',min(n,100));
 
 
-%% Step 2 : Conduct a proposed clustering algorithm
-% This step is also a part of "main_real.m" file
-
-
 %% Generate similarity matrices for clustering analysis
 % 'K' is a number of omics data
 % 'sigma_set' and 'g_set' are sets of 'sigma' and 'g' that are parameters of Gaussian kernels
@@ -125,12 +120,6 @@ V_tot=V_tot./ repmat(sqrt(sum(V_tot.^2,2)),1,size(V_tot,2));
 % run K-means on the final output
 % Clus_ind_wd123 is the inferred cluster label
 Clus_ind_wd123=litekmeans(V_tot,CCC,'Replicates',50);  %% run k-means on embeddings to get cell populations
-
-
-%% Step 3 : Conduct a survival analysis
-
-
-
 
 
 
