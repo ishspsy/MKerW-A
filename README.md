@@ -45,7 +45,8 @@ the results in this file.
 
 
 **Note** Most of the simulations and TCGA data applications were implemented on an Apple MacBook Pro (2.7 GHz, 8 GB of memory) using the MATLAB 2016b. 
-The computational complexity of the algorithm is $O(n^3)$, where n is the number of samples. This complexity is same as that of the traditional spectral clustering algorithm. 
+The computational complexity of the algorithm is O(n^3), where n is the number of samples. This complexity is same as that of the traditional spectral clustering algorithm. 
+In our implementation, the proposed algorithm takes only a few minutes.
 
 
 
