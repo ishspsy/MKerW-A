@@ -9,13 +9,13 @@
 
 ### Main functions
 
-- [generate_sim_matrices2.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/generate_sim_matrices2.m)
+- [generate_sim_matrices.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/generate_sim_matrices.m)
 : Construct multiple similarity matrices using Gaussian kernels (Step 1).
 
-- [clus_sim_update2_2HW.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update2_2HW.m)
+- [clus_sim_update.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update.m)
 : Main *MKerW-A* algorithm solving optimization problem (Step 2).
 
-- [clus_sim_update0_2HW.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update0_2HW.m)
+- [clus_sim_update_embedded.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update_embedded.m)
 : Algorithm solving embedded ADMM algorithm in Step 2.
 
 - [Example (BRCA)](https://github.com/ishspsy/MKerW-A/blob/master/example_BRCA.m)
@@ -58,7 +58,7 @@ In our implementation, the proposed algorithm takes only a few minutes.
 
 - All the other supplementary files are located in the directory ["**Other_functions**"](https://github.com/ishspsy/MKerW-A/tree/master/Other_functions).
 
-- All the codes generating figures presented in the manuscript are located in the directory ["**Generating_Figures**"](https://github.com/ishspsy/MKerW-A/tree/master/Generating_Figures).
+- All the codes generating figures presented in the paper are located in the directory ["**Generating_Figures**"](https://github.com/ishspsy/MKerW-A/tree/master/Generating_Figures).
 
 - All the resulting files (e.g. .MAT and .eps) are located in the directory ["**Results_files**"](https://github.com/ishspsy/MKerW-A/tree/master/Resulting_files).
 
