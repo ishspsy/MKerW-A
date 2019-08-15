@@ -1,4 +1,4 @@
-function  [rep, P_set, Q_set, Gamma_set ,err]=clus_sim_update0_2HW(CCC,ck,c, rho, lam, mu, eta, kernel_ini_set)  
+function  [rep, P_set, Q_set, Gamma_set ,err]=clus_sim_update_embedded(CCC,ck,c, rho, lam, mu, eta, kernel_ini_set)  
 %% This function solves the embedded ADMM algorithm.
 
 %% Input

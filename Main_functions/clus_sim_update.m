@@ -1,6 +1,5 @@
-function  [P_set,V_set,V_tot, ck, W_set,Wg_set]=clus_sim_update2_2HW0(CCC, c,rho, n, K, p,q, gg, lam, mu, eta, W_euc_double)   % W_euc_nearest_double
-%% This function solves our algorithm but using the equal weight to each omic data.
-
+function  [P_set,V_set,V_tot, ck, W_set, Wg_set]=clus_sim_update(CCC, c,rho, n, K, p,q, gg, lam, mu, eta, W_euc_double)   
+%% This function solves the proposed algorithm generating the computed target matrices that will be used to cluster samples.
 
 %% Input
 % CCC is the target cluster number
@@ -19,17 +18,17 @@ function  [P_set,V_set,V_tot, ck, W_set,Wg_set]=clus_sim_update2_2HW0(CCC, c,rho
 % P_set is the set of the obtained K target matrices
 % V_set is the set of the first CCC number of eigenvectors of the obtained target matrices
 % V_tot is the matrices constructed by merging components of V_set 
-% ck is the learned weight for each omic data. It always have ck=ones(1,K) as the all data set is used equally.
+% ck is the learned weight for each omic data
 
 
 
-
-%initial step
+%initialize weight
 Wi_set=cell(1,K);
 for k=1:K 
       Wi_set{k}=ones(p,q)/(p*q);
 end
-       
+
+
 Wgi_set=cell(1,K);
 for k=1:K
      Wgi_set{k}=ones(1,gg(k))/(gg(k));
@@ -44,12 +43,11 @@ for k=1:K
     for lll=1:(p*q);
     ave_ker=ave_ker+W_euc_double{k}{jj}{lll}/(p*q);
     end
-    kernel_ini_set{k}{jj}=ave_ker;   %dimension of W_euc_double is K*gg*55 cells
+    kernel_ini_set{k}{jj}=ave_ker;    %dimension of W_euc_double is K*gg*55 cells
     ker_in=ker_in+kernel_ini_set{k}{jj}/gg(k);
     end
     kernel_ini_set2{k}=ker_in;
 end
-
 
 
 Q_set=zeros(K,n,n); Gamma_set=cell(1,K);  
@@ -58,21 +56,22 @@ for k=1:K
 LL= V(:,1:CCC) ;  Q=LL*LL';  Q_set(k,:,:)=Q;  Gamma_set{k}=zeros(n,n);
 end
 
-cki=ones(1,K);  %%
+cki=ones(1,K); 
 
 err=10;  Pi_set=Q_set; Qi_set=Q_set; Gammai_set=Gamma_set; W_set=Wi_set; Wg_set=Wgi_set; ck=cki;
 rep=0; obj_fun=[];
 
+
 while  (err>0.001) + (rep<10) >1
 rep=rep+1;
 
-%update P,Q,Gamma
-[rep2, P_set, Q_set, Gamma_set, err0]=clus_sim_update0_2HW(CCC, ck, c, rho, lam, mu, eta, kernel_ini_set2);
+% Update P,Q,Gamma
+[~, P_set, Q_set, Gamma_set, ~]=clus_sim_update_embedded(CCC, ck, c, rho, lam, mu, eta, kernel_ini_set2);
 
 err_P=squeeze(sum(sum(sum((P_set-Pi_set).^2))));
 
 
-      
+% Update W
 W_set=cell(1,K); err_W=0; 
 for kk=1:K
   W0=zeros(p,q); W=zeros(p,q);
@@ -98,7 +97,7 @@ end
 
 
 
- Wg_set=cell(1,K); err_Wg=0;
+Wg_set=cell(1,K); err_Wg=0;
 for kk=1:K
   W0=zeros(1,gg(kk)); W=zeros(1,gg(kk));
          for jj=1:gg(kk)
@@ -122,9 +121,31 @@ for kk=1:K
 end
 
 
+% update weight of data
+ck0=zeros(1,K);  err_ck=0;
+for kk=1:K
+    ck0(kk)=((1/(1*rho))*(-c* norm(squeeze(P_set(kk,:,:)),'fro')^2 + trace(kernel_ini_set2{kk}*squeeze(P_set(kk,:,:)))));    
+end
 
-ck=ones(1,K); cki=ones(1,K);  %%
-err_ck=0;   %err_ck+norm(ck- cki,'fro')^2;
+ck0d=zeros(K,K);
+for kk=1:K
+    for uu=1:K
+        ck0d(kk,uu)=ck0(kk)-ck0(uu);
+    end
+end
+
+for kk=1:K^2
+    ck0d(kk)=exp(ck0d(kk));
+end
+
+ck0d=(ck0d)/max(max((ck0d)));  
+    
+ck00=zeros(1,K);
+for kk=1:K
+       ck00(kk)=1/(1+ sum(ck0d(setdiff(1:K,kk),kk)));                   
+end
+ck=K*ck00/sum(ck00);
+err_ck=err_ck+norm(ck- cki,'fro')^2;
 
 
 
@@ -139,16 +160,16 @@ for kk=1:K
     kernel_ini_set2{kk}=ker_in;
 end
 
-
 err=err_P+err_W+err_Wg+err_ck; 
 Wi_set=W_set; Wgi_set=Wg_set; Pi_set=P_set; Gammai_set=Gamma_set; Qi_set=Q_set; cki=ck;
 err
 end
 
+
 %choose the first CCC eigenvectors
 V_set=cell(1,K); V_tot=[];
 for k=1:K
-    [V, temp, evs]=eig1(squeeze(P_set(k,:,:)), CCC);   V=V./ repmat(sqrt(sum(V.^2,2)),1,CCC);   
+    [V, temp, evs]=eig1(squeeze(P_set(k,:,:)), CCC);   V=V./repmat(sqrt(sum(V.^2,2)),1,CCC);   
     V_set{k}=V;  V_tot=[V_tot, V];
 end
     

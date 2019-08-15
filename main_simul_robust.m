@@ -109,7 +109,7 @@ nmi_wd123=[]; pmi_wd123=[]; rmi_wd123=[];
 for ijk=1:length(lam_set);
 lam=lam_set(ijk);    
 K=length(data_set3); gg=ones(1,K); c=0.1; rho=2;  mu=0.1; eta=1;    
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);  
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);  
 ck123=ck;
 %this incorportates learned weight in the three target matrices for clustering analysis
 tresult=[P_set,V_set,V_tot,ck,W_set,Wg_set];  tresult_final=tresult;
@@ -129,7 +129,7 @@ nmi_wd123=[]; pmi_wd123=[]; rmi_wd123=[];
 
 for ijk=1:length(mu_set);  
 K=length(data_set3); gg=ones(1,K); c=0.1; rho=2;  mu=mu_set(ijk);  lam=0.001;  eta=1;     
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);  
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);  
 ck123=ck;
 %this incorportates learned weight in the three target matrices for clustering analysis
 tresult=[P_set,V_set,V_tot,ck,W_set,Wg_set];  tresult_final=tresult;
@@ -151,7 +151,7 @@ nmi_wd123=[]; pmi_wd123=[]; rmi_wd123=[];
 for ijk=1:length(c_set);
 c=c_set(ijk);    
 K=length(data_set3); gg=ones(1,K); rho=2;  mu=0.1; lam=0.001; eta=1;    
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n); 
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n); 
 ck123=ck;
 %this incorportates learned weight in the three target matrices for clustering analysis
 tresult=[P_set,V_set,V_tot,ck,W_set,Wg_set];  tresult_final=tresult;
@@ -172,7 +172,7 @@ nmi_wd123=[]; pmi_wd123=[]; rmi_wd123=[];
 for ijk=1:length(rho_set);
 c=0.1;    
 K=length(data_set3); gg=ones(1,K); rho=rho_set(ijk);  mu=0.1; lam=0.001; eta=1;    
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n); 
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n); 
 ck123=ck;
 %this incorportates learned weight in the three target matrices for clustering analysis
 tresult=[P_set,V_set,V_tot,ck,W_set,Wg_set];  tresult_final=tresult;

@@ -107,7 +107,7 @@ CCC=4;
 c=0.1; rho=2; lam=0.001; mu=1; eta=1;   
 
 % Solve the optimization problem
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, ...
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, ...
 Wfc0s_euc_near_n);  
 
 % learned weight for each omic data  

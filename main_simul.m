@@ -191,7 +191,7 @@ rmis123=[rmis123,RandIndex(true_labs, Clus_ind_spec123)];
 
 %% this is our algorithm without kernel learning to each omic data
 K=length(data_set3); gg=ones(1,K);  c=0.1; rho=2;  lam=0.001; mu=0.1; eta=1;     %K=1; gg=[1];
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW(CCC, c,rho, n, K, 1,1, gg, lam, mu, eta, Wfc0s_euc_near_n_average);   %Wfc0_euc_reg); % Wfc0_euc_near_n) ;
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update(CCC, c,rho, n, K, 1,1, gg, lam, mu, eta, Wfc0s_euc_near_n_average);   %Wfc0_euc_reg); % Wfc0_euc_near_n) ;
 tresult=[P_set,V_set,V_tot,ck,W_set,Wg_set]; 
 V_tot=[]; for dd=1:K;  V_tot=[V_tot, tresult{K+1}(dd)*tresult{K+2}(:,(dd*CCC-CCC+1):(dd*CCC))]; end
 V_tot=V_tot./ repmat(sqrt(sum(V_tot.^2,2)),1,size(V_tot,2));
@@ -204,7 +204,7 @@ rmi_keradd123=[rmi_keradd123,RandIndex(true_labs, Clus_ind_wok123)];
 
 %% this is our algorithm with learned weight to each omic data
 K=length(data_set3); gg=ones(1,K); c=0.1; rho=2;  lam=0.001; mu=0.1; eta=1;     %K=1; gg=[1];
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);   %Wfc0_euc_reg); % Wfc0_euc_near_n) ;
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);   %Wfc0_euc_reg); % Wfc0_euc_near_n) ;
 ck123=ck;
 %this incorportates learned weight in the three target matrices for clustering analysis
 tresult=[P_set,V_set,V_tot,ck,W_set,Wg_set];  tresult_final=tresult;
@@ -231,7 +231,7 @@ rmi_wdf123=[rmi_wdf123,RandIndex(true_labs, Clus_ind_wdf123)];
 
 %% this is our algorithm using equal weight to each omic data
  K=length(data_set3);gg=ones(1,K);  c=0.1; rho=2;  lam=0.001;  mu=1; eta=1;     
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW0(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);   %Wfc0_euc_reg); % Wfc0_euc_near_n) ;
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);   %Wfc0_euc_reg); % Wfc0_euc_near_n) ;
 
 %this use all the learned target matrices for clustering analysis
 tresult=[P_set,V_set,V_tot,ck,W_set,Wg_set]; 

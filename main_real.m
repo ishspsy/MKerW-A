@@ -179,7 +179,7 @@ Clus_ind_spec123=litekmeans([V_tot1,V_tot2,V_tot3],CCC,'Replicates',50);  %% run
 K=length(data_set3); gg=ones(1,K);  c=0.1; rho=2;  lam=0.001; mu=1; eta=1; 
 
 % Solve the optimization problem
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW(CCC, c,rho, n, K, 1,1, gg, lam, mu, eta, Wfc0s_euc_near_n_average); 
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update(CCC, c,rho, n, K, 1,1, gg, lam, mu, eta, Wfc0s_euc_near_n_average); 
 tresult=[P_set,V_set,V_tot,ck,W_set,Wg_set]; 
 
 % Incorporate obtained target matrices for clustering analysis
@@ -195,7 +195,7 @@ Clus_ind_wok123=litekmeans(V_tot,CCC,'Replicates',50);
 K=length(data_set3); gg=ones(1,K); c=0.1; rho=2;  lam=0.001; mu=1; eta=1;   
 
 % Solve the optimization problem
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);  
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);  
 
 % learned weight for each omic data
 ck123=ck;
@@ -223,7 +223,7 @@ Clus_ind_wdf123=litekmeans(V_tot,CCC,'Replicates',50);  %% run k-means on embedd
 
 %% this is our algorithm using equal weight to each omic data (no weight learning)
  K=length(data_set3);gg=ones(1,K);  c=0.1; rho=2;  lam=0.001; mu=1;  mu=1; eta=1;     
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW0(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);   
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);   
 
 %this use all the learned target matrices for clustering analysis
 tresult=[P_set,V_set,V_tot,ck,W_set,Wg_set]; 

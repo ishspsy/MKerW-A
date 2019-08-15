@@ -69,7 +69,7 @@ K=length(data_set3); gg=ones(1,K); c=0.1; rho=2;  lam=0.001; mu=1; eta=1;     %K
 
 nmi_wd123=[];  pmi_wd123=[]; rmi_wd123=[];
 for CCC=2:30
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);   %Wfc0_euc_reg); % Wfc0_euc_near_n) ;
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_n);   %Wfc0_euc_reg); % Wfc0_euc_near_n) ;
 ck123=ck;
 
 %this incorportates learned weight in the three target matrices for clustering analysis
@@ -78,7 +78,7 @@ V_tot=[]; for dd=1:K;  V_tot=[V_tot, tresult{K+1}(dd)*tresult{K+2}(:,(dd*CCC-CCC
 V_tot=V_tot./ repmat(sqrt(sum(V_tot.^2,2)),1,size(V_tot,2));
 Clus_ind_wd123=litekmeans(V_tot,CCC,'Replicates',50);  %% run k-means on embeddings to get cell populations
 
-[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update2_2HW(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_nn);   %Wfc0_euc_reg); % Wfc0_euc_near_n) ;
+[P_set,V_set,V_tot,ck,W_set,Wg_set]=clus_sim_update(CCC, c,rho, n, K, 5,11, gg, lam, mu, eta, Wfc0s_euc_near_nn);   %Wfc0_euc_reg); % Wfc0_euc_near_n) ;
 ck123=ck;
 
 %this incorportates learned weight in the three target matrices for clustering analysis

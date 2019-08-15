@@ -1,13 +1,20 @@
 
 # Overview
 
-This directory includes supplementary functions related to other benchmark clustering methods used in analysis
+This directory includes supplementary functions related to other benchmark clustering methods used in analysis 
+as well as supplementary functions that related to clustering analysis in the paper.
 
 ## Subdirectory
 
 
+Cluster_performance
+
+- [**Cluster_performance**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/Cluster_performance)
+: this directory includes supplementary functions that related to clustering analysis in the paper.
+
+
 - [**code_coregspectral**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/code_coregspectral)
-: Main *MKerW-A* algorithm solving optimization problem (Step 2).
+: this subdirectory includes codes related spectral clustering.
 
 - [**drtoolbox**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/drtoolbox)
 : this subdirectory/package includes all the codes related to the "Matlab Toolbox for Dimensionality Reduction". This was developed by Laurens van der Maaten (lvdmaaten@gmail.com) and 
@@ -24,7 +31,7 @@ the related paper is "A Unified Alternating Direction Method of Multipliers by M
 
 
 - [**projcapped**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/projcapped)
-:  this subdirectory includes "projection.m" function that is used in "clus_sim_update0_2.m". 
+:  this subdirectory includes "projection.m" function that is used in "clus_sim_update_embedded.m". 
 This was developed by Weiran Wang and the related paper is "Projection onto the capped simplex".
 
 
