@@ -1,6 +1,6 @@
 # Overview
 
-This directory includes main functions that directly related to main clustering analysis in the paper.
+This directory includes main functions that directly related to main clustering algorithm.
 
 ## Codes
 
