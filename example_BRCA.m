@@ -96,7 +96,7 @@ gg=ones(1,K);
 sigma_set=1:0.25:2;  
 g_set=10:2:30;
 data_set3={sel_exp2,sel_mirna2,sel_cna2};  
-[Wfc0s_euc_near_n]=generate_sim_matrices2(K,data_set3, gg, 0,sigma_set,g_set);
+[Wfc0s_euc_near_n]=generate_sim_matrices(K,data_set3, gg, 0,sigma_set,g_set);
 
 
 %% Target clustering number 

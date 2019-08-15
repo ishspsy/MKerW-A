@@ -1,4 +1,4 @@
-function[Wfc0s_euc_near_n]=generate_sim_matrices2(K,data_set3,gg, true_labs,sigma_set,k_set);
+function[Wfc0s_euc_near_n]=generate_sim_matrices(K,data_set3,gg, true_labs,sigma_set,k_set);
 %% This code generates multiple similarity matrices for each data set.
 
 %% Input

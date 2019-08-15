@@ -83,13 +83,13 @@ in_Xi= [sel_exp2,sel_mirna2,sel_cna2];
 
 %% Generate similarity matrices for clustering analysis
 K=3; gg=ones(1,K); sigma_set=1:0.25:2;  k_set=10:2:30;
-[Wfc0s_euc_near_n]=generate_sim_matrices2(K,data_set3, gg, 0,sigma_set,k_set);
+[Wfc0s_euc_near_n]=generate_sim_matrices(K,data_set3, gg, 0,sigma_set,k_set);
 
 %% Target clustering number for cancer iii
-CCC=CCC_set(iii); C=CCC;
+CCC=CCC_set(iii);
 
 %% Arbitrary clustering labels
-ini_labs=1:C;  ini_labs=repmat(ini_labs,[1, round(n/CCC)]); 
+ini_labs=1:CCC;  ini_labs=repmat(ini_labs,[1, round(n/CCC)]); 
 if length(ini_labs)<n;  ini_labs=[ini_labs, CCC*ones(1,n-length(ini_labs))];  
 elseif length(ini_labs)>n; ini_labs=ini_labs(1:n);
 end

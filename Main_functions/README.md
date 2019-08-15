@@ -4,7 +4,7 @@ This directory includes main functions that directly related to main clustering 
 
 ## Codes
 
-- [generate_sim_matrices2.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/generate_sim_matrices2.m)
+- [generate_sim_matrices.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/generate_sim_matrices.m)
 : this code constructs multiple similarity matrices using Gaussian kernels (Step 1).
 
 - [clus_sim_update.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update.m)

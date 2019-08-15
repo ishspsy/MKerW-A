@@ -135,7 +135,7 @@ Wfc0s_euc_reg=cell(1,K); Wfc0s_euc_near=cell(1,K);  %Wfg_euc_reg_n=cell(1,K);
 sigma_set=1:0.25:2;   
 k_set=10:2:30;
 
-[Wfc0s_euc_near_n]=generate_sim_matrices2(K,data_set3,gg, true_labs,sigma_set,k_set);
+[Wfc0s_euc_near_n]=generate_sim_matrices(K,data_set3,gg, true_labs,sigma_set,k_set);
 
 
 
