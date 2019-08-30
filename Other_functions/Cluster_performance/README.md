@@ -17,22 +17,20 @@ This code is written by David Corney (2000).
 for the randomly assigned clusters given each target cluster numbers from 2 to 30.
 
 
-
 - [diff_area_func_ave.m](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/Cluster_performance/diff_area_func_ave.m)
 : this code computes the differences of the fitted survival curves of each cluster in terms of curves of all patients.
 
 - [diff_area_func.m](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/Cluster_performance/diff_area_func.m)
-: this code computes the absolute area between two fitted survival curves (used to compute 'L1-dif').
+: this code computes the absolute area between two fitted survival curves.
 
 - [diff_area_func2.m](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/Cluster_performance/diff_area_func2.m)
-: this code computes the relative area of the fitted survival curves (used to compute 'L1-dif').     
+: this code computes the relative area of the fitted survival curves.  
 
 - [generate_surv_func_general.m](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/Cluster_performance/generate_surv_func_general.m)
-: this function provides the fitted Weibull survival curve for each group. 
+: this function provides the fitted Weibull survival curve for each subgroup. 
 
 - [purity.m](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/Cluster_performance/purity.m)
 : this code computes a purity between two clustering labels.
-
 
 - [reg_pca.m](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/Cluster_performance/reg_pca.m)
 : this code performs PCA analysis. 

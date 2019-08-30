@@ -1,16 +1,14 @@
 
 # Overview
 
-This directory includes supplementary functions related to other benchmark clustering methods used in analysis 
-as well as supplementary functions that related to clustering analysis in the paper.
+This directory consists of supplementary functions related to other benchmarking clustering methods used in analysis 
+as well as other functions used in clustering analysis.
 
 ## Subdirectory
 
 
-Cluster_performance
-
 - [**Cluster_performance**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/Cluster_performance)
-: this directory includes supplementary functions that related to clustering analysis in the paper.
+: this subdirectory contains supplementary functions used in downstream analysis.
 
 
 - [**code_coregspectral**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/code_coregspectral)
@@ -31,7 +29,7 @@ the related paper is "A Unified Alternating Direction Method of Multipliers by M
 
 
 - [**projcapped**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/projcapped)
-:  this subdirectory includes "projection.m" function that is used in "clus_sim_update_embedded.m". 
+:  this subdirectory includes a projection code ("projection.m") function that is used in "clus_sim_update_embedded.m". 
 This was developed by Weiran Wang and the related paper is "Projection onto the capped simplex".
 
 

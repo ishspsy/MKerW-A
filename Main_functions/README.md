@@ -1,6 +1,6 @@
 # Overview
 
-This directory includes main functions that directly related to main clustering algorithm.
+This directory includes main functions that directly related to the proposed clustering algorithm.
 
 ## Codes
 
@@ -11,10 +11,10 @@ This directory includes main functions that directly related to main clustering 
 : this code is the main *MKerW-A* algorithm solving optimization problem (Step 2).
 
 - [clus_sim_update_embedded.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update_embedded.m)
-: this code solves embedded ADMM algorithm in Step 2.
+: this code solves the embedded ADMM algorithm in Step 2.
 
 - [clus_sim_update2.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update2.m)
-: this code solves our algorithm but using the equal weight to each omic data. 
+: this code solves the proposed algorithm but using the equal weight to each omic data. 
 
 
 
