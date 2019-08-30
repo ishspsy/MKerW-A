@@ -108,6 +108,11 @@ This mat file summarizes the survival results for each cluster method for each c
 This resulting file is generated from [main_real.m](https://github.com/ishspsy/MKerW-A/blob/master/main_real.m).
 
 
+- [codeforMKerWA.R](https://github.com/ishspsy/MKerW-A/blob/master/Resulting_files/Survival_results/codeforMKerWA.R):
+This R file includes downstream analysis of the proposed clustering method.
+
+
 	
+
 
 
