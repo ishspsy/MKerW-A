@@ -13,8 +13,7 @@ load('all_data')
 % all_exp is the rna data for all the patinets
 % all_mirna is the mirna data for all the patinets
 % all_cna is the cna data for all the patinets
-% all_pat is the index vector of patients indicating corresponding cancer types (See the first column of 
-% all_clin for the original cancer name)
+% all_pat is the index vector of patients indicating corresponding cancer types (See the first column of all_clin for the original cancer name)
 
 
 
