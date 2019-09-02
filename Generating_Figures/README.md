@@ -1,7 +1,7 @@
 
 # Overview
 
-This directory includes main functions used in main clustering analysis
+This directory includes main functions that generate figures presented in the paper
 
 ## Codes
 

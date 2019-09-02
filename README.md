@@ -7,7 +7,7 @@
 *MKerW-A* is a novel multi-view spectral clustering framework to integrate different omics data types measured from the same subjects by treating each omic data type as a different informative representation between patients. *MKerW-A* learns the weight of each data type as well as a similarity measure between patients via a non-convex optimization framework. It solves the proposed non-convex problem iteratively using the ADMM algorithm.
 
 
-### Main functions
+## Main functions
 
 - [generate_sim_matrices.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/generate_sim_matrices.m)
 : Construct multiple similarity matrices using Gaussian kernels (Step 1).
@@ -16,26 +16,26 @@
 : Main *MKerW-A* algorithm solving optimization problem (Step 2).
 
 - [clus_sim_update_embedded.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update_embedded.m)
-: Algorithm solving embedded ADMM algorithm in Step 2.
+: Algorithm solving the embedded ADMM algorithm included in Step 2.
 
 - [Example (BRCA)](https://github.com/ishspsy/MKerW-A/blob/master/example_BRCA.m)
-: This file includes a brief analysis step used in the paper when patients of Breast Invasive Carcinoma (BRCA) cancer are used in our analysis.  
+: This file includes a brief analysis step included in the paper when patients of Breast Invasive Carcinoma (BRCA) cancer are used in our analysis.  
 User may follow the similar analysis step for the other cancer types.
 
 
-### Main analysis
+## Main analysis
 
 Please follow the links to reproduce the clustering results of TCGA data sets
 
 -  [Clustering analysis for each cancer type ("main_real.m")](https://github.com/ishspsy/MKerW-A/blob/master/main_real.m)
 : Generate clustering results as well as basic survival analysis results for each of the 22 cancer types. All the analysis in the paper are based on
-the results in this file.
+the results from this file.
 
 -  [Clustering analysis for identifying 22 cancer types ("main_simul.m")](https://github.com/ishspsy/MKerW-A/blob/master/main_simul.m)
 : Generate clustering results related to identifying 22 cancer types.
 
 -  [Analysis on target cluster number ("main_simul_cls.m")](https://github.com/ishspsy/MKerW-A/blob/master/main_simul_cls.m)
-: Choose target cluster number.
+: Choose target cluster numbers.
 
 -  [Sensitivity analysis ("main_simul_robust.m")](https://github.com/ishspsy/MKerW-A/blob/master/main_simul_robust.m)
 : Sensitivity analysis with respect to changes of regularization parameters.
@@ -52,7 +52,7 @@ In our implementation, the proposed algorithm takes only a few minutes.
 
 
 
-### Directory
+## Directory
 
 - All the functions used in the proposed algorithm *MKerW-A* are located in the directory ["**Main_functions**"](https://github.com/ishspsy/MKerW-A/tree/master/Main_functions).
 
@@ -65,24 +65,8 @@ In our implementation, the proposed algorithm takes only a few minutes.
 
 
 
-## Example data sets
 
-The 22 TCGA cancer data sets saved in the matlab file can be obtained from the dropbox directory [**all_data.mat**](https://www.dropbox.com/s/v22fx0j2gnpeta6/all_data.mat?dl=0). 
-
-Specifically, *all_clin* includes clinical information of the patients from the 22 cancer types.
-
-- *all_exp* is the RNA data for all the patients.
-
-- *all_mirna* is the MicroRNA data for all the patients.
-
-- *all_cna* is the CNA data for all the patients.
-
-- *all_pat* is the index vector of patients indicating corresponding cancer types (See the first column of *all_clin* for the original cancer name).
-
-
-
-
-## Data
+## TCGA Data
 
 We provide MATLAB implementations of *MKerW-A* in the MKerW-A branch. The 22 TCGA cancer data sets saved in the matlab file can be downloaded from the dropbox directory [**all_data.mat**](https://www.dropbox.com/s/v22fx0j2gnpeta6/all_data.mat?dl=0). 
 
@@ -151,6 +135,20 @@ and survival analysis as follows:
 
 - Uveal Melanoma (UVM), n=80
 
+
+
+
+The 22 TCGA cancer data sets saved in the matlab file can be obtained from the dropbox directory [**all_data.mat**](https://www.dropbox.com/s/v22fx0j2gnpeta6/all_data.mat?dl=0). 
+
+Specifically, *all_clin* includes clinical information of the patients from the 22 cancer types.
+
+- *all_exp* is the RNA data for all the patients.
+
+- *all_mirna* is the MicroRNA data for all the patients.
+
+- *all_cna* is the CNA data for all the patients.
+
+- *all_pat* is the index vector of patients indicating corresponding cancer types (See the first column of *all_clin* for the original cancer name).
 
 
 
