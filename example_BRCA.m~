@@ -153,7 +153,7 @@ bbm_set=cell(1,CCC); bb_surv=cell(1,CCC);
 % To use the function "generate_surv_func_general.m", we transform these data:
 bbm_set_set{1}=bbm_set; bb_surv_set{1}=bb_surv;     
 
-% Generate a monthly survival time for each cluster 
+    
 for kkkk=1:CCC
     bbm_set_set_m{1}{kkkk}=bbm_set_set{1}{kkkk}/30;
 end;
@@ -162,7 +162,6 @@ for kkkk=1:CCC
     bbm_set_set_m{1}{kkkk}=bbm_set_set_m{1}{kkkk}.*(bbm_set_set_m{1}{kkkk}>0);
 end
 
-% Generate a monthly survival time for all patients
 bbm_set_set_mt{1} = [];    bb_surv_sett{1} = [];
 for kkkk=1:CCC
     bbm_set_set_mt{1}=[bbm_set_set_mt{1}, bbm_set_set_m{1}{kkkk}'];
@@ -173,35 +172,37 @@ end
 
 %% Fit Weibull survival model to each inferred cluster and compute the metrics that measure heterogeneity of survival times between inferred groups.
 
-% "bord" is an upper limit of survival time (month) when generating a graph
 bord=120; 
 
 % generating survival curves for each cluster
 [pd1_A_set,pd1_B_set]=generate_surv_func_general(CCC, bord, bbm_set_set_m,bb_surv_set, 1, colors_set,gp_title11,gp_title22,cl_title, name_i)
 
-diff_area_set{1}=diff_area_func(CCC, pd1_A_set, pd1_B_set, bord, 0.01);; 
+diff_area_set{1}=diff_area_func(CCC, pd1_A_set,pd1_B_set, bord, 0.01);; 
 diff_area_sum =sum(sum(diff_area_set{1})); diff_area_min =min(min(diff_area_set{1}+10000*diag(ones(1,CCC))));
-diff_avg_set{1}=diff_area_func_ave(CCC, pd1_A_set, pd1_B_set, bord, 0.01); 
+diff_avg_set{1}=diff_area_func_ave(CCC, pd1_A_set,pd1_B_set, bord, 0.01); 
 diff_avg_sum=sum(sum(diff_avg_set{1}))/CCC; diff_avg_min=min(diff_avg_set{1});
-diff_area_set2{1}=diff_area_func2(CCC, pd1_A_set, pd1_B_set, bord, 0.01);
+diff_area_set2{1}=diff_area_func2(CCC, pd1_A_set,pd1_B_set, bord, 0.01);
 
-% "area_prop_min" corresponds to the "Area_Min" value
+% area_prop_min{1} corresponds to the "Area_Min" value
 area_p=diff_area_set2{1}./diff_area_set{1}; area_p(isnan(area_p))=0;
-area_prop_min =min(min(area_p+diag(ones(1,CCC)))); 
+area_prop{1}=area_p; area_prop_sum{1}=sum(sum(area_p))/(CCC^2-CCC); area_prop_min{1}=min(min(area_p+diag(ones(1,CCC)))); 
 
-
-%% for log-rank test, we use the funtion "MatSurv"
-% Note that in the paper, we use the R for log-rank test, but this matlab version also gives similar results
-% "MatSurv" is like a matlab version of "survminer R-package"
-% generate a group index "GroupVar" as follows (this should be cell-type):
-gp_index = [{'1'}, {'2'}, {'3'}, {'4'}, {'5'}, {'6'}, {'7'}, {'8'}]
+% for log-rank test,
 
 GroupVar = [];
 for kkkk=1:CCC
-    GroupVar = [GroupVar, repmat({gp_index{kkkk}}, 1, length(bbm_set_set_m{1}{kkkk}))];
+    GroupVar = [GroupVar, kkkk * ones(1, length(bbm_set_set_m{1}{kkkk}))];
+    % GroupVar = [GroupVar, repmat(['kkkk'], length(bbm_set_set_m{1}{kkkk}), 1)];
 end
 
-% "p" is a log-rank p-value
+
+
+GroupVar = [repmat({'1'}, 1, length(bbm_set_set_m{1}{1})),repmat({'2'}, 1, length(bbm_set_set_m{1}{2})),repmat({'3'}, 1, length(bbm_set_set_m{1}{3})), repmat({'4'}, 1, length(bbm_set_set_m{1}{4}))]
+
+     
+
+
+
 [p,fh,stats]=MatSurv(bbm_set_set_mt{1}', bb_surv_sett{1}',  GroupVar', 'GroupsToUse', {'1','2','3','4'});
 
 

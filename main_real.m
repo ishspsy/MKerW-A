@@ -317,8 +317,6 @@ colors_set={'-b','-g','-r','-k','-m', '--b','--g','--r','--k','--m'};
 cl_title={'Blue', 'Green', 'Red', 'Black', 'Magenta','Blue--', 'Green--', 'Red--', 'Black--', 'Magenta--'  };
 
 
-bbbb=surv_time; 
-
 for jjj=1:length(clus_ind_set12)
     ind_set=cell(1,CCC);   
 for ii=1:CCC
@@ -331,7 +329,7 @@ cannot_use=zeros(1,length(clus_ind_set12));
 for jjj=1:length(clus_ind_set12)
     bbm_set=cell(1,CCC); bb_surv=cell(1,CCC);
     for ijk=1:CCC
-        bbm_set{ijk}= bbbb(ind_set_set{jjj}{ijk});
+        bbm_set{ijk}= surv_time(ind_set_set{jjj}{ijk});
         bb_surv{ijk}= surv_stat(ind_set_set{jjj}{ijk}) ;
         if sum(bb_surv{ijk}==1)== length(bb_surv{ijk}); cannot_use(jjj)=1; end
     end

@@ -38,8 +38,8 @@ This was developed by Weiran Wang and the related paper is "Projection onto the 
 the related paper was published in Nature Methods titled as "Visualization and analysis of single-cell RNA-seq data by kernel-based similarity learning".
 
 
-
-
+-[**MatSurv-master**](https://github.com/ishspsy/MKerW-A/blob/master/Other_functions/MatSurv-master)
+:  this subdirectory includes codes for simple survival analysis function that creates a KM-plot with risk table.
 
 
 	
