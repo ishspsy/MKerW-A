@@ -2,7 +2,9 @@
 
 addpath(genpath(pwd))
 
-%% Step 1 : Data loading and processing 
+
+
+%% <Step 1> : Data loading and processing 
 % This step is also a part of "main_real.m" file
 
 % The following matlab file can be downloaded from 
@@ -17,7 +19,7 @@ load('all_data')
 
 
 
-%% Consider a breast cancer (BRCA)
+%% <Step 1-1> : Consider a breast cancer (BRCA)
 iii=1; 
 
 % iii is the cancer index from the 22 cancer types of the index (iii=1 represents BRCA)
@@ -47,7 +49,8 @@ iii=1;
 % iii = 22 CESC
 
 
-%% choose patients belonging to the group of cancer with index iii and conduct data processing
+
+%% <Step 1-2>: Choose patients belonging to the group of cancer with index iii and conduct data processing
 % iii_set is the set of indices of cancer types in the raw data set
 iii_set= setdiff(1:33, [10 11 12 16 20 24 25 27 29 31 33]);
 
@@ -59,7 +62,7 @@ sel_cna=(all_cna(:,ind_set));
 sel_mirna=(all_mirna(:,ind_set));
 sel_clin=all_clin(ind_set,:); 
 
-%% extract survival time and statuses
+% extract survival time and statuses
 surv_stat=sel_clin(:,end-4); 
 surv_stat=strrep(table2array(surv_stat),'Alive','1'); surv_stat=strrep(surv_stat,'Dead','0'); 
 surv_stat=str2double(surv_stat); 
@@ -69,7 +72,7 @@ surv_time=sel_clin(:,end-3);  surv_time=table2array(surv_time);  surv_time=str2d
 ind_set2=setdiff(1:n,union(find(isnan(surv_time)), find(isnan(surv_stat))));  n=length(ind_set2);
 surv_time=surv_time(ind_set2);  surv_stat=surv_stat(ind_set2);
 
-%% write omics data sets and clinical information
+% write omics data sets and clinical information
 sel_exp=(sel_exp(:,ind_set2)); 
 sel_cna=(sel_cna(:,ind_set2)); 
 sel_mirna=(sel_mirna(:,ind_set2));   
@@ -82,11 +85,14 @@ sel_cna2 = reg_pca(sel_cna',min(n,100));
 
 
 
-%% Step 2 : Conduct a proposed clustering algorithm
+
+
+%% <Step 2> : Conduct a proposed clustering algorithm
 % This step is also a part of "main_real.m" file
 
 
-%% Generate similarity matrices for clustering analysis
+
+%% <Step 2-1> : Generate similarity matrices for clustering analysis
 % 'K' is a number of omics data
 % 'sigma_set' and 'g_set' are sets of 'sigma' and 'g' that are parameters of Gaussian kernels
 K=3;  
@@ -95,13 +101,15 @@ sigma_set=1:0.25:2;
 g_set=10:2:30;
 data_set3={sel_exp2,sel_mirna2,sel_cna2};  
 
-% construct multiple similarity matrices using the function "generate_sim_matrices" 
+
+
+%% <Step 2-2> : Construct multiple similarity matrices using the function "generate_sim_matrices" 
 % "generate_sim_matrices.m" can be found in the "Main_functions" directory
 [Wfc0s_euc_near_n]=generate_sim_matrices(K,data_set3, gg, 0,sigma_set,g_set);
 
 
 
-%% this is our clustering algorithm 
+%% <Step 2-3> : Run the proposed clustering algorithm 
 % CCC is a target clustering number and c, rho, lam, mu, eta are regularization parameters
 CCC=4; c=0.1; rho=2; lam=0.001; mu=1; eta=1;   
 
@@ -127,8 +135,12 @@ V_tot=V_tot./ repmat(sqrt(sum(V_tot.^2,2)),1,size(V_tot,2));
 Clus_ind_wd123=litekmeans(V_tot,CCC,'Replicates',50);  %% run k-means on embeddings to get cell populations
 
 
-%% Step 3 : Conduct a survival analysis
 
+
+
+%% <Step 3> : Conduct a survival analysis
+
+% Define some variables that will be used to draw a graph
 name_i=1; 
 gp_title11={'KM Plot and fitted curve using the Weibull distribution'};
 gp_title22={'Clus1','Clus2','Clus3','Clus4','Clus5', 'Clus6', 'ALL'};
@@ -142,7 +154,6 @@ for ii=1:CCC
     ind_set{ii}=find(Clus_ind_wd123==ii);
 end
 
- 
 % sets of survival times and stauts for each cluster
 bbm_set=cell(1,CCC); bb_surv=cell(1,CCC);
     for ijk=1:CCC
@@ -162,7 +173,7 @@ for kkkk=1:CCC
     bbm_set_set_m{1}{kkkk}=bbm_set_set_m{1}{kkkk}.*(bbm_set_set_m{1}{kkkk}>0);
 end
 
-% Generate a monthly survival time for all patients
+% Generate a monthly survival time for all patients in the chosen cancer type
 bbm_set_set_mt{1} = [];    bb_surv_sett{1} = [];
 for kkkk=1:CCC
     bbm_set_set_mt{1}=[bbm_set_set_mt{1}, bbm_set_set_m{1}{kkkk}'];
@@ -171,7 +182,8 @@ end
 
 
 
-%% Fit Weibull survival model to each inferred cluster and compute the metrics that measure heterogeneity of survival times between inferred groups.
+
+%% <Step 3-1> : Fit Weibull survival model to each inferred cluster
 
 % "bord" is an upper limit of survival time (month) when generating a graph
 bord=120; 
@@ -179,21 +191,29 @@ bord=120;
 % generating survival curves for each cluster
 [pd1_A_set,pd1_B_set]=generate_surv_func_general(CCC, bord, bbm_set_set_m,bb_surv_set, 1, colors_set,gp_title11,gp_title22,cl_title, name_i)
 
-diff_area_set{1}=diff_area_func(CCC, pd1_A_set, pd1_B_set, bord, 0.01);; 
-diff_area_sum =sum(sum(diff_area_set{1})); diff_area_min =min(min(diff_area_set{1}+10000*diag(ones(1,CCC))));
-diff_avg_set{1}=diff_area_func_ave(CCC, pd1_A_set, pd1_B_set, bord, 0.01); 
-diff_avg_sum=sum(sum(diff_avg_set{1}))/CCC; diff_avg_min=min(diff_avg_set{1});
-diff_area_set2{1}=diff_area_func2(CCC, pd1_A_set, pd1_B_set, bord, 0.01);
+
+
+
+%% <Step 3-2> : Compute the metrics that measure heterogeneity of survival times between inferred groups
+
+diff_area_set=diff_area_func(CCC, pd1_A_set, pd1_B_set, bord, 0.01);; 
+diff_area_sum =sum(sum(diff_area_set)); diff_area_min =min(min(diff_area_set+10000*diag(ones(1,CCC))));
+diff_avg_set=diff_area_func_ave(CCC, pd1_A_set, pd1_B_set, bord, 0.01); 
+diff_avg_sum=sum(sum(diff_avg_set))/CCC; diff_avg_min=min(diff_avg_set);
+diff_area_set2=diff_area_func2(CCC, pd1_A_set, pd1_B_set, bord, 0.01);
 
 % "area_prop_min" corresponds to the "Area_Min" value
-area_p=diff_area_set2{1}./diff_area_set{1}; area_p(isnan(area_p))=0;
+area_p=diff_area_set2./diff_area_set; area_p(isnan(area_p))=0;
 area_prop_min =min(min(area_p+diag(ones(1,CCC)))); 
 
 
-%% for log-rank test, we use the funtion "MatSurv"
+
+%% <Step 3-3> : Perform log-rank test 
+
+% for log-rank test, we use the funtion "MatSurv"
 % Note that in the paper, we use the R for log-rank test, but this matlab version also gives similar results
 % "MatSurv" is like a matlab version of "survminer R-package"
-% generate a group index "GroupVar" as follows (this should be cell-type):
+% first, generate a group index "GroupVar" as follows (this should be cell-type):
 gp_index = [{'1'}, {'2'}, {'3'}, {'4'}, {'5'}, {'6'}, {'7'}, {'8'}]
 
 GroupVar = [];
@@ -203,7 +223,6 @@ end
 
 % "p" is a log-rank p-value
 [p,fh,stats]=MatSurv(bbm_set_set_mt{1}', bb_surv_sett{1}',  GroupVar', 'GroupsToUse', {'1','2','3','4'});
-
-
+p
 
 
