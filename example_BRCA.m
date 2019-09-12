@@ -12,9 +12,9 @@ addpath(genpath(pwd))
 load('all_data')   
 
 % all_clin includes clinical information for the patients from 22 cancer types
-% all_exp is the rna data for all the patinets
-% all_mirna is the mirna data for all the patinets
-% all_cna is the cna data for all the patinets
+% all_exp is the rna data for all the patients
+% all_mirna is the mirna data for all the patients
+% all_cna is the cna data for all the patients
 % all_pat is the index vector of patients indicating corresponding cancer types (See the first column of all_clin for the original cancer name)
 
 
@@ -196,7 +196,7 @@ bord=120;
 
 %% <Step 3-2> : Compute the metrics that measure heterogeneity of survival times between inferred groups
 
-diff_area_set=diff_area_func(CCC, pd1_A_set, pd1_B_set, bord, 0.01);; 
+diff_area_set=diff_area_func(CCC, pd1_A_set, pd1_B_set, bord, 0.01);
 diff_area_sum =sum(sum(diff_area_set)); diff_area_min =min(min(diff_area_set+10000*diag(ones(1,CCC))));
 diff_avg_set=diff_area_func_ave(CCC, pd1_A_set, pd1_B_set, bord, 0.01); 
 diff_avg_sum=sum(sum(diff_avg_set))/CCC; diff_avg_min=min(diff_avg_set);
