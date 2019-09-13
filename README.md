@@ -18,18 +18,18 @@
 - [clus_sim_update_embedded.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update_embedded.m)
 : Algorithm solving the embedded ADMM algorithm included in Step 2.
 
+
+
+## Main analysis
+
+Please follow the links to reproduce the clustering results of TCGA data sets
+
 - [Example_BRCA.m](https://github.com/ishspsy/MKerW-A/blob/master/example_BRCA.m)
 : This file includes a brief analysis step included in the paper when patients of Breast Invasive Carcinoma (BRCA) cancer are used in our analysis.  
 User may follow the similar analysis step for the other cancer types.
 
 - [Example_BRCA.pdf](https://github.com/ishspsy/MKerW-A/blob/master/example_BRCA.pdf)
 : This pdf file includes a brief analysis step as well as resulting plot using Breast Invasive Carcinoma (BRCA) cancer.
-
-
-
-## Main analysis
-
-Please follow the links to reproduce the clustering results of TCGA data sets
 
 -  [Clustering analysis for each cancer type ("main_real.m")](https://github.com/ishspsy/MKerW-A/blob/master/main_real.m)
 : Generate clustering results as well as basic survival analysis results for each of the 22 cancer types. All the analysis in the paper are based on
