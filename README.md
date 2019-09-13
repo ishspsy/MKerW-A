@@ -18,11 +18,11 @@
 - [clus_sim_update_embedded.m](https://github.com/ishspsy/MKerW-A/blob/master/Main_functions/clus_sim_update_embedded.m)
 : Algorithm solving the embedded ADMM algorithm included in Step 2.
 
-- [Example (BRCA)](https://github.com/ishspsy/MKerW-A/blob/master/example_BRCA.m)
+- [Example_BRCA.m](https://github.com/ishspsy/MKerW-A/blob/master/example_BRCA.m)
 : This file includes a brief analysis step included in the paper when patients of Breast Invasive Carcinoma (BRCA) cancer are used in our analysis.  
 User may follow the similar analysis step for the other cancer types.
 
-- [Example (BRCA)](https://github.com/ishspsy/MKerW-A/blob/master/example_BRCA.pdf)
+- [Example_BRCA.pdf](https://github.com/ishspsy/MKerW-A/blob/master/example_BRCA.pdf)
 : This pdf file includes a brief analysis step as well as resulting plot using Breast Invasive Carcinoma (BRCA) cancer.
 
 
