@@ -22,6 +22,10 @@
 : This file includes a brief analysis step included in the paper when patients of Breast Invasive Carcinoma (BRCA) cancer are used in our analysis.  
 User may follow the similar analysis step for the other cancer types.
 
+- [Example (BRCA)](https://github.com/ishspsy/MKerW-A/blob/master/example_BRCA.pdf)
+: This pdf file includes a brief analysis step as well as resulting plot using Breast Invasive Carcinoma (BRCA) cancer.
+
+
 
 ## Main analysis
 
