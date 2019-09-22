@@ -29,7 +29,7 @@ Please follow the links to reproduce the clustering results of TCGA data sets
 User may follow the similar analysis step for the other cancer types.
 
 - [Example_BRCA.pdf](https://github.com/ishspsy/MKerW-A/blob/master/example_BRCA.pdf)
-: This pdf file includes a brief analysis step as well as resulting plot using Breast Invasive Carcinoma (BRCA) cancer.
+: This pdf file includes a brief analysis step as well as a survival curve using Breast Invasive Carcinoma (BRCA) cancer.
 
 -  [Clustering analysis for each cancer type ("main_real.m")](https://github.com/ishspsy/MKerW-A/blob/master/main_real.m)
 : Generate clustering results as well as basic survival analysis results for each of the 22 cancer types. All the analysis in the paper are based on
